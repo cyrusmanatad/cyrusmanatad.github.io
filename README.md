@@ -3,7 +3,7 @@
 👩🏻‍🎓 Studied [Computer Science](https://www.vsu.edu.ph/) at the Visayas State University of Baybay,  City Leyte<br/>
 💭 Currently learning [Laravel 11](https://laravel.com/)!<br/>
 
-# 💻 Tech Stack
+# 💻 Tech Stack - LAMP
 <!-- Badges from https://github.com/Ileriayo/markdown-badges -->
 ### Client Side (Front End)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
