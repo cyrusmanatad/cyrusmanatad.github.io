@@ -1,8 +1,25 @@
 # 👋 Hi, I'm Cyrus!
-👩🏻‍💻 Web Developer for over 7 years!<br/>
-👩🏻‍🎓 Studied [Computer Science](https://www.vsu.edu.ph/) at the Visayas State University of Baybay,  City Leyte<br/>
-👩🏻‍💻 My comfort zone [CodeIgniter](https://codeigniter.com/). <b>The small framework with powerful features.</b> <br/>
-💭 I'm becoming a fan of [Laravel](https://laravel.com/) and [React JS](https://react.dev/) !<br/>
+
+## 👩🏻‍💻 About<br/>
+
+I'm a Web Developer with **7 years of hands-on experience** in the ever-evolving IT jungle. I've worn many hats — backend ninja, frontend firefighter, DevOps wr...ang...ler??? kind of!? XD — and I still get excited about clean code, efficient systems, and solving problems that make people say “Wow, Bilis ah!” XD
+
+Whether it's **building scalable, modular apps**, **debugging a bug that mysteriously vanishes when I screen share**, or **optimizing websites until they load faster than you can blink**, I'm your guy. XD
+
+I’ve worked across **Linux and Windows**, juggled **CMSes**, integrated **SSO with Azure Entra ID**, and kept deployments smooth with tools like **Docker**, **Git**, and **CI/CD pipelines**. If it lives on the web and occasionally misbehaves — I’ve probably fixed it (or stayed up all night trying). I'm not a nerd, duhh! Ayosin agad at baka makalimotan. Ganern!!! XD
+
+I love collaborating with designers, project managers, and fellow devs — because the best products are built by great teams, not solo heroes. I’m also big on mentoring and sharing what I know (and occasionally what's **not** to do).
+
+If you're looking for someone who’s **technically solid**, **team-friendly**, and **likes to laugh while shipping code**, let’s talk!
+
+🛠️ Tech highlights:
+- PHP (Laravel, CodeIgniter), JS, HTML/CSS
+- CMS development and API integrations
+- Git, Docker, GitLab CI/CD
+- AWS, Plesk, Linux/Windows server wrangling
+- Performance tuning with PageSpeed, GTMetrix, Pingdom
+
+☕ I love black coffee and I hate **spaghetti**. I prefer **KISS** and making my code **DRY**, and my commit messages... usually readable "Apply Fix and Update". XD
 
 # 💻 Tech Stack - LAMP
 <!-- Badges from https://github.com/Ileriayo/markdown-badges -->
