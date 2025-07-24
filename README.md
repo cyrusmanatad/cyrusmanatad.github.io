@@ -37,3 +37,38 @@
 ### Operating System
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+## 💼 Professional Experience Summary
+
+### ✅ Full-Stack Web Development & Deployment
+- Designed, built, tested, and deployed scalable, modular, and maintainable web applications across various platforms.
+- Developed and integrated APIs to sync data between CMS and mobile applications.
+- Built and maintained applications using MVC and PHP-based frameworks such as **CodeIgniter** and **Laravel**.
+
+### ✅ Testing, Optimization & Performance
+- Conducted comprehensive website testing and troubleshooting before deployment to ensure a smooth user experience.
+- Optimized web application performance using tools like **Google PageSpeed Insights**, **GTmetrix**, and **Pingdom** to improve load times and efficiency.
+
+### ✅ System & Server Management
+- Managed and configured web servers and repositories across **AWS/Plesk**, **on-premises environments**, and **Linux/Windows servers**.
+- Handled deployments using **GitLab**, **Docker**, and manual server processes, ensuring reliable version control and CI/CD integration.
+
+### ✅ Security & Authentication
+- Implemented secure user authentication and authorization workflows across multiple systems.
+- Integrated **SSO using Microsoft Azure Entra ID** into web applications to streamline secure access.
+
+### ✅ Project Collaboration & Lifecycle Involvement
+- Collaborated across the **full software development lifecycle**—from gathering requirements to production releases.
+- Worked closely with clients, designers, and developers to ensure feature alignment and technical feasibility.
+- Provided regular milestone updates and project assessments to stakeholders and project managers.
+
+### ✅ Leadership & Mentoring
+- Trained and guided junior and mid-level developers to improve skills and maintain high productivity.
+- Actively contributed to team performance improvements and resolved performance and behavioral issues effectively.
+
+### ✅ Version Control & Deployment
+- Utilized **Git** for tracking changes, managing application versioning, and ensuring smooth deployment workflows.
+
+### ✅ Problem Solving & Issue Resolution
+- Investigated and resolved critical issues quickly, escalating when necessary to avoid delays.
+- Provided detailed assessments for new projects and collaborated with teams to define technical specifications and project scope.
