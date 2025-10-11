@@ -2,15 +2,13 @@
 
 ## 👩🏻‍💻 About<br/>
 
-I'm a Web Developer with **7 years of hands-on experience** in the ever-evolving IT jungle. I've worn many hats — backend ninja, frontend firefighter, DevOps wr...ang...ler??? kind of!? XD — and I still get excited about clean code, efficient systems, and solving problems that make people say “Wow, Bilis ah!” XD
+I’m a passionate Web Developer with over 7 years of experience building and supporting web applications that make a real difference for users and businesses.
 
-Whether it's **building scalable, modular apps**, **debugging a bug that mysteriously vanishes when I screen share**, or **optimizing websites until they load faster than you can blink**, I'm your guy. XD
+I love creating clean, reliable, and scalable web solutions using PHP (CodeIgniter, Laravel), JavaScript, MySQL/MariaDB, and modern front-end tools like Bootstrap, Tailwind CSS, and ReactJS. Over the years, I’ve worked on projects that involve everything from custom CMS builds and API integrations (REST & SOAP) to Single Sign-On (SSO) setups with Azure Entra ID and LDAP.
 
-I’ve worked across **Linux and Windows**, juggled **CMSes**, integrated **SSO with Azure Entra ID**, and kept deployments smooth with tools like **Docker**, **Git**, and **CI/CD pipelines**. If it lives on the web and occasionally misbehaves — I’ve probably fixed it (or stayed up all night trying). I'm not a nerd, duhh! Ayosin agad at baka makalimotan. Ganern!!! XD
+I’m also big on process efficiency, like using Docker, AWS, and GitLab CI/CD to ensure smoother deployments and consistent environments. I enjoy solving technical challenges, mentoring teammates, and improving systems so everything runs faster and smarter.
 
-I love collaborating with designers, project managers, and fellow devs — because the best products are built by great teams, not solo heroes. I’m also big on mentoring and sharing what I know (and occasionally what's **not** to do).
-
-If you're looking for someone who’s **technically solid**, **team-friendly**, and **likes to laugh while shipping code**, let’s talk!
+At the end of the day, I’m driven by curiosity and the desire to keep learning, whether it’s exploring new frameworks or finding creative ways to make web apps more intuitive and efficient.
 
 🛠️ Tech highlights:
 - PHP (Laravel, CodeIgniter), JS, HTML/CSS
