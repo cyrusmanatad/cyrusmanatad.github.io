@@ -23,7 +23,7 @@ export const skillsData: SkillCategory[] = [
   {
     category: 'Backend',
     skills: [
-      { name: 'PHP', iconUrl: PHPLogo }, { name: 'CodeIgniter', iconUrl: CILogo }, { name: 'Laravel' }, { name: 'MySQL 8', iconUrl: MySQLLogo }, { name: 'MariaDB' },
+      { name: 'PHP', iconUrl: PHPLogo }, { name: 'CodeIgniter', iconUrl: CILogo }, { name: 'Laravel' }, { name: 'MySQL 8', iconUrl: MySQLLogo }, { name: 'MariaDB' }, { name: 'postgresql' }, { name: 'sqlite' }
     ],
   },
   {
@@ -35,7 +35,7 @@ export const skillsData: SkillCategory[] = [
   {
     category: 'DevOps & Tools',
     skills: [
-      { name: 'Docker' }, { name: 'Git' }, { name: 'GitLab' }, { name: 'Github' }, { name: 'Apache' }, { name: 'Nginx' }, { name: 'cpanel' }, { name: 'Plesk', iconUrl : PleskLogo }, { name: 'AWS', iconUrl: AwsLogo },
+      { name: 'Docker' }, { name: 'Git' }, { name: 'GitLab' }, { name: 'Github' }, { name: 'Apache' }, { name: 'Nginx' }, { name: 'cpanel' }, { name: 'Plesk', iconUrl : PleskLogo }, { name: 'AWS', iconUrl: AwsLogo }, { name: 'linux' }
     ],
   },
   // {
@@ -51,22 +51,40 @@ export const experienceData: Experience[] = [
     role: 'Programmer/Analyst II',
     company: 'Vertere Global Solutions Inc.',
     period: '2019 – Present',
-    description: 'Led full-stack development of web applications, integrated third-party APIs, and implemented CI/CD pipelines to streamline deployment processes.',
-    technologies: ['PHP', 'CodeIgniter', 'ReactJS', 'Docker', 'GitLab CI/CD', 'AWS'],
+    description: 'Led full-stack development of web applications and related APIs, integrated third-party APIs, use Docker in development and implemented CI/CD pipelines to streamline deployment processes.',
+    responsibilities: [
+      'Developed and maintained web applications using PHP (CodeIgniter, Laravel), JavaScript, and modern front-end frameworks.',
+      'Integrated third-party APIs and developed RESTful APIs for seamless data exchange between systems.',
+      'Utilized Docker for containerization, ensuring consistent development environments and simplifying deployment processes.',
+      'Implemented CI/CD pipelines using GitLab CI/CD to automate testing, building, and deployment of applications.',
+      'Collaborated with cross-functional teams to gather requirements, design solutions, and deliver high-quality software products.'
+    ],
+    technologies: ['PHP', 'CodeIgniter', 'Docker', 'GitLab CI/CD', 'AWS', 'MySQL', 'MSSQL', 'MDX Query', 'Oracle', 'Web Services', 'REST API', 'SOAP', 'Bootstrap', 'CSS', 'JavaScript'],
   },
   {
     role: 'PHP Programmer',
     company: 'Diversified Technology Solutions Inc.',
     period: '2018 – 2019',
     description: 'Developed and maintained recruitment automation and HR management systems, significantly reducing manual data entry and improving workflow efficiency.',
-    technologies: ['PHP', 'CodeIgniter', 'jQuery', 'MySQL', 'Bootstrap'],
+    responsibilities: [
+      'Developed a recruitment automation system that streamlined candidate tracking, interview scheduling, and onboarding processes, reducing manual data entry.',
+      'Designed and created a user-friendly homegrown job application portal for applicants.',
+      'Maintained and enhanced an HR management system, improving employee data management and reporting capabilities.',
+      'Collaborated with HR teams to gather requirements and implement features that improved overall workflow efficiency.',
+    ],
+    technologies: ['PHP', 'CodeIgniter', 'Laravel', 'Vue,js', 'jQuery', 'MySQL', 'Tailwind CSS', 'DataTables'],
   },
   {
     role: 'System Developer Intern',
     company: 'RHU Abuyog',
     period: '2017',
     description: 'Designed and implemented a healthcare automation system for patient registration, medical records management, and reporting.',
-    technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    responsibilities: [
+      'Developed a healthcare automation system that digitized patient registration, medical records management, and reporting processes.',
+      'Collaborated with healthcare staff to understand their needs and tailor the system to improve efficiency and accuracy in data handling.',
+      'Provided training and support to health care personnel, ensuring smooth adoption of the new system.'
+    ],
+    technologies: ['PHP', 'CodeIgniter', 'MySQL', 'Bootstrap', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'jQuery UI', 'AJAX', 'DataTables'],
   },
 ];
 

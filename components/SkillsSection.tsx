@@ -8,7 +8,7 @@ interface SkillCardProps {
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({ category }) => (
-  <div className="bg-navy-light p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+  <div className="bg-navy-light hover:bg-gray-500 p-6 rounded-lg shadow-lg transform">
     <h3 className="text-xl text-center font-bold text-accent mb-6">{category.category}</h3>
     <div className="flex justify-center flex-wrap gap-3">
       {category.skills.map((skill) => {

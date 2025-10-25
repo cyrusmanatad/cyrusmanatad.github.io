@@ -12,7 +12,7 @@ const AboutSection: React.FC = () => {
         <div className="md:col-span-2 bg-white/10 rounded-lg hover:border-2 hover:border-dashed border-accent ease-in-out">
             {/* <div className="p-2 border-2 border-accent rounded-lg shadow-lg"> */}
             <div className="rounded-lg shadow-lg transition-transform transform hover:translate-y-[30px] hover:translate-x-[30px] duration-500 ease-in-out">
-                 <img src={Profile} alt="Cyrus Manatad" className="w-full h-full object-cover rounded-md" />
+                 <img src={Profile} alt="Cyrus Manatad" className="w-full h-full object-cover rounded-md blur grayscale hover:filter-none duration-500" />
             </div>
         </div>
         <div className="md:col-span-3">

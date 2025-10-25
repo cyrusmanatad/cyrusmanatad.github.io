@@ -27,6 +27,18 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ experience }) => (
       </div>
       <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{experience.period}</time>
       <p className="mb-4 text-base font-normal text-gray-400">{experience.description}</p>
+      <div>
+        {experience.responsibilities && (
+          <div className="mb-4">
+            <h4 className="text-md font-semibold text-white mb-2">Key Responsibilities:</h4>
+            <ul className="list-disc list-outside pl-4 py-2 text-gray-400">
+              {experience.responsibilities.map((item :string , index: number) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
       <div className="flex flex-wrap gap-2">
         {experience.technologies.map((tech) => (
           <span key={tech} className="text-xs font-medium px-2.5 py-0.5 rounded bg-gray-700 text-gray-300">{tech}</span>

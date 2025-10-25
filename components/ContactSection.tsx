@@ -21,10 +21,10 @@ const ContactSection: React.FC = () => {
             </a>
         </div>
         <div className="flex justify-center space-x-6">
-          <a href="#" aria-label="GitHub" className="text-gray-400 hover:text-accent transition-colors duration-300 transform hover:scale-110">
+          <a href="https://github.com/cyrusmanatad" aria-label="GitHub" className="text-gray-400 hover:text-accent transition-colors duration-300 transform hover:scale-110">
             <GithubIcon className="w-8 h-8" />
           </a>
-          <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-accent transition-colors duration-300 transform hover:scale-110">
+          <a href="https://www.linkedin.com/in/camanatad/" aria-label="LinkedIn" className="text-gray-400 hover:text-accent transition-colors duration-300 transform hover:scale-110">
             <LinkedinIcon className="w-8 h-8" />
           </a>
         </div>
