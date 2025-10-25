@@ -17,11 +17,11 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ experience }) => (
       </svg>
     </span>
     <div className="bg-navy-light p-6 rounded-lg shadow-lg">
-      <div className="flex flex-col md:flex-row items-center mb-4">
+      <div className="flex flex-col md:flex-row items-start mb-4">
         <h3 className="mb-1 text-xl font-semibold text-white">
           {experience.role} 
         </h3>
-        <span className="text-accent ml-2 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full bg-blue-900 border border-blue-400">
+        <span className="ml-2 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full bg-blue-900 border border-blue-400">
           {experience.company}
         </span>
       </div>
