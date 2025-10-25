@@ -8,7 +8,7 @@ I love creating clean, reliable, and scalable web solutions using PHP (CodeIgnit
 
 I’m also big on process efficiency, like using Docker, AWS, and GitLab CI/CD to ensure smoother deployments and consistent environments. I enjoy solving technical challenges, mentoring teammates, and improving systems so everything runs faster and smarter.
 
-At the end of the day, I’m driven by curiosity and the desire to keep learning, whether it’s exploring new frameworks or finding creative ways to make web apps more intuitive and efficient.
+I’m driven by curiosity and the desire to keep learning, whether it’s exploring new frameworks or finding creative ways to make web apps more intuitive and efficient.
 
 🛠️ Tech highlights:
 - PHP (Laravel, CodeIgniter), JS, HTML/CSS
@@ -16,8 +16,6 @@ At the end of the day, I’m driven by curiosity and the desire to keep learning
 - Git, Docker, GitLab CI/CD
 - AWS, Plesk, Linux/Windows server wrangling
 - Performance tuning with PageSpeed, GTMetrix, Pingdom
-
-☕ I love black coffee and I hate **spaghetti**. I prefer **KISS** and making my code **DRY**, and my commit messages... usually readable "Apply Fix and Update". XD
 
 # 💻 Tech Stack - LAMP
 <!-- Badges from https://github.com/Ileriayo/markdown-badges -->
