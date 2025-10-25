@@ -10,14 +10,14 @@ interface TimelineItemProps {
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ experience }) => (
   <div className="mb-10 ml-6">
-    <span className="absolute flex items-center justify-center w-6 h-6 bg-accent rounded-full -left-3 ring-8 ring-navy-light">
+    <span className="absolute animate-pulse flex items-center justify-center w-6 h-6 bg-accent rounded-full -left-3 ring-8 ring-navy-light">
       <svg className="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z"/>
         <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
       </svg>
     </span>
-    <div className="bg-navy-light p-6 rounded-lg shadow-lg">
-      <div className="flex flex-col md:flex-row items-start mb-4">
+    <div className="bg-navy-light text-justify p-6 rounded-lg shadow-lg">
+      <div className="flex flex-col justify-center md:justify-start md:flex-row items-start mb-4">
         <h3 className="mb-1 text-xl font-semibold text-white">
           {experience.role} 
         </h3>

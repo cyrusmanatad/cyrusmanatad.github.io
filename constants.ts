@@ -30,7 +30,7 @@ export const skillsData: SkillCategory[] = [
   {
     category: 'Frontend',
     skills: [
-      { name: 'HTML5' }, { name: 'CSS3' }, { name: 'JavaScript' }, { name: 'Typescript', iconUrl: TsLogo }, { name: 'jQuery' }, { name: 'Bootstrap' }, { name: 'Tailwind CSS' }, { name: 'React' }, { name: 'Vue.js' }, {name: 'NPM', iconUrl: NpmLogo}, { name: 'Vite_', iconUrl: ViteLogo }, { name: 'ShadCN', iconUrl: ShadcnLogo},
+      { name: 'HTML5' }, { name: 'CSS3' }, { name: 'JavaScript' }, { name: 'Typescript', iconUrl: TsLogo }, { name: 'jQuery' }, { name: 'Bootstrap' }, { name: 'Tailwind CSS' }, { name: 'React' }, { name: 'Vue.js' }, {name: 'NPM', iconUrl: NpmLogo}, { name: 'Vite*', iconUrl: ViteLogo }, { name: 'ShadCN', iconUrl: ShadcnLogo},
     ],
   },
   {

@@ -26,6 +26,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ category }) => (
             <img
               src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skillSlug}/${skillSlug}-original.svg`}
               alt={skill.name}
+              key={skill.name + '-icon'}
               className="w-20 h-20 object-contain"
               onError={(e) => {
                 // fallback if no logo found
@@ -36,7 +37,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ category }) => (
               title={skill.name}
             />
           </div>
-          <span key={skill.name} className="bg-navy-lighter text-gray-300 text-sm font-medium px-3 py-1 rounded-full">{skill.name}</span>
+          <span key={skill.name + '-name'} className="bg-navy-lighter text-gray-300 text-sm font-medium px-3 py-1 rounded-full">{skill.name}</span>
           </div>
         );
       })}

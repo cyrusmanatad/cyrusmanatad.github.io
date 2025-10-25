@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import Logo from '/assets/android-chrome-192x192.png';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -25,7 +26,9 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-navy-light/80 shadow-lg backdrop-blur-sm' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 md:px-10 lg:px-20">
         <div className="flex justify-between items-center py-4">
-          <a href="#" className="text-2xl font-bold text-accent">CM.</a>
+          <a href="#" className="text-2xl font-bold text-accent">
+            <img src={Logo} alt="Cyrus Logo" className="max-w-10" />
+          </a>
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="text-gray-300 hover:text-accent transition-colors duration-300">{link.name}</a>

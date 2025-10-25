@@ -8,19 +8,24 @@ import PHPLogo from "/assets/logo-php.png";
 const AboutSection: React.FC = () => {
   return (
     <Section id="about" title="About Me">
-      <div className="grid md:grid-cols-5 gap-12 items-center">
+      <div className="grid md:grid-cols-5 gap-12 items-start">
         <div className="md:col-span-2 bg-white/10 rounded-lg hover:border-2 hover:border-dashed border-accent ease-in-out">
-            {/* <div className="p-2 border-2 border-accent rounded-lg shadow-lg"> */}
-            <div className="rounded-lg shadow-lg transition-transform transform hover:translate-y-[30px] hover:translate-x-[30px] duration-500 ease-in-out">
+            <div className="rounded-lg shadow-lg transition-transform transform md:hover:translate-y-[30px] md:hover:translate-x-[30px] duration-500 ease-in-out">
                  <img src={Profile} alt="Cyrus Manatad" className="w-full h-full object-cover rounded-md blur grayscale hover:filter-none duration-500" />
             </div>
         </div>
         <div className="md:col-span-3">
-          <p className="text-lg text-gray-400 mb-6 leading-relaxed">
-            I love creating clean, reliable, and scalable web solutions using PHP (CodeIgniter, Laravel), JavaScript, MySQL/MariaDB, and modern front-end tools like Bootstrap, Tailwind CSS, and ReactJS. Over the years, I’ve worked on projects that involve everything from custom CMS builds and API integrations (REST & SOAP) to Single Sign-On (SSO) setups with Azure Entra ID and LDAP.
+          <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
+            I love creating clean, reliable, and scalable web solutions using PHP (<b>CodeIgniter</b>, <b>Laravel</b>), <b>JavaScript</b>, <b>MySQL/MariaDB</b> , and modern front-end tools like <b>Bootstrap</b>, <b>Tailwind</b> <b>CSS</b>, <b>ReactJS</b>, and <b>Vue.js</b>.
           </p>
-          <p className="text-lg text-gray-400 mb-6 leading-relaxed">
-            I’m also big on process efficiency, like using Docker, AWS, and GitLab CI/CD to ensure smoother deployments and consistent environments. I enjoy solving technical challenges, mentoring teammates, and improving systems so everything runs faster and smarter.
+          <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
+            Over the years, I’ve worked on projects that involve everything from <b>brand sites</b>, <b>transactional application</b>, <b>custom CMS</b>, <b>API development and integrations</b> (<i>REST API</i>, <i>SOAP</i>, <i>XML</i>, <i>Oracle BI reports</i>). I've recently implemented the <b>Single Sign-On (SSO)</b> authentication method using <b>Azure Entra ID</b> and <b>LDAP</b> on some of the projects I'm working on.
+          </p>
+          <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
+            I'm focused on making the development process more efficient by using tools like <b>Docker</b>, <b>AWS</b>, and <b>GitLab</b> with <b>CI/CD</b> integration for smoother deployments and reliable environments. I enjoy solving technical problems, helping teammates improve technical skills, and improving systems to make everything run faster and better.
+          </p>
+          <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
+            Lastly, I’m always eager to learn new things to stay up to date with ever-evolving technology, whether it’s trying out new <b>frameworks</b> or finding better ways to make web apps more <i>user-friendly</i> and efficient.
           </p>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center bg-navy-light p-3 rounded-md shadow-md">
