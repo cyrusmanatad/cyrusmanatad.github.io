@@ -23,19 +23,19 @@ export const skillsData: SkillCategory[] = [
   {
     category: 'Backend',
     skills: [
-      { name: 'PHP8', iconUrl: PHPLogo }, { name: 'CodeIgniter', iconUrl: CILogo }, { name: 'Laravel' }, { name: 'MySQL8', iconUrl: MySQLLogo }, { name: 'MariaDB' },
+      { name: 'PHP', iconUrl: PHPLogo }, { name: 'CodeIgniter', iconUrl: CILogo }, { name: 'Laravel' }, { name: 'MySQL 8', iconUrl: MySQLLogo }, { name: 'MariaDB' },
     ],
   },
   {
     category: 'Frontend',
     skills: [
-      { name: 'HTML5' }, { name: 'CSS3' }, { name: 'JavaScript' }, { name: 'Typescript' }, { name: 'jQuery' }, { name: 'Bootstrap' }, { name: 'React' }, { name: 'Vue.js' }, {name: 'NPM'}, { name: 'Vite_', iconUrl: ViteLogo }, { name: 'Tailwind CSS' }, { name: 'ShadCN', iconUrl: ShadcnLogo},
+      { name: 'HTML5' }, { name: 'CSS3' }, { name: 'JavaScript' }, { name: 'Typescript', iconUrl: TsLogo }, { name: 'jQuery' }, { name: 'Bootstrap' }, { name: 'Tailwind CSS' }, { name: 'React' }, { name: 'Vue.js' }, {name: 'NPM', iconUrl: NpmLogo}, { name: 'Vite_', iconUrl: ViteLogo }, { name: 'ShadCN', iconUrl: ShadcnLogo},
     ],
   },
   {
     category: 'DevOps & Tools',
     skills: [
-      { name: 'Docker' }, { name: 'GitLab' }, { name: 'Apache' }, { name: 'Nginx' }, { name: 'Plesk', iconUrl : PleskLogo }, { name: 'AWS', iconUrl: AwsLogo },
+      { name: 'Docker' }, { name: 'Git' }, { name: 'GitLab' }, { name: 'Github' }, { name: 'Apache' }, { name: 'Nginx' }, { name: 'cpanel' }, { name: 'Plesk', iconUrl : PleskLogo }, { name: 'AWS', iconUrl: AwsLogo },
     ],
   },
   // {

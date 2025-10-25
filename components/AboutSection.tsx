@@ -3,13 +3,15 @@ import React from 'react';
 import Section from './Section';
 import { CodeIcon, PhpIcon, CloudIcon } from './IconComponents';
 import Profile from '/assets/ui-portfolio-profile.png';
+import PHPLogo from "/assets/logo-php.png";
 
 const AboutSection: React.FC = () => {
   return (
     <Section id="about" title="About Me">
       <div className="grid md:grid-cols-5 gap-12 items-center">
-        <div className="md:col-span-2">
-            <div className="p-2 border-2 border-accent rounded-lg shadow-lg">
+        <div className="md:col-span-2 bg-white/10 rounded-lg hover:border-2 hover:border-dashed border-accent ease-in-out">
+            {/* <div className="p-2 border-2 border-accent rounded-lg shadow-lg"> */}
+            <div className="rounded-lg shadow-lg transition-transform transform hover:translate-y-[30px] hover:translate-x-[30px] duration-500 ease-in-out">
                  <img src={Profile} alt="Cyrus Manatad" className="w-full h-full object-cover rounded-md" />
             </div>
         </div>
@@ -26,7 +28,7 @@ const AboutSection: React.FC = () => {
               <span>Full-Stack Developer</span>
             </div>
             <div className="flex items-center bg-navy-light p-3 rounded-md shadow-md">
-              <PhpIcon className="w-6 h-6 mr-3 text-accent" />
+              <img className="w-6 h-6 mr-3 text-accent" src={PHPLogo} alt="" />
               <span>PHP Expert</span>
             </div>
             <div className="flex items-center bg-navy-light p-3 rounded-md shadow-md">

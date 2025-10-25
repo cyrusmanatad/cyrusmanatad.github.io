@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PHPLogo from "../assets/logo-php.png";
 
 type IconProps = {
   className?: string;
