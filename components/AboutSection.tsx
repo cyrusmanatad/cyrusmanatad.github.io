@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
                  <img src={Profile} alt="Cyrus Manatad" className="w-full h-full object-cover rounded-md blur grayscale hover:filter-none duration-500" />
             </div>
         </div>
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 md:px-8">
           <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
             I love creating clean, reliable, and scalable web solutions using PHP (<b>CodeIgniter</b>, <b>Laravel</b>), <b>JavaScript</b>, <b>MySQL/MariaDB</b> , and modern front-end tools like <b>Bootstrap</b>, <b>Tailwind</b> <b>CSS</b>, <b>ReactJS</b>, and <b>Vue.js</b>.
           </p>
