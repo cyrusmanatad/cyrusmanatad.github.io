@@ -9,6 +9,7 @@ import Lactezin from "./assets/ui-lactezin.jpg";
 import Fortima from "./assets/ui-fortima.jpg";
 import GynePro from "./assets/ui-gynepro.jpg";
 import C1Ulisys from "./assets/ui-c1ulisys.jpg";
+import CmsUi from "./assets/ui-cms.png";
 import CILogo from "./assets/logo-ci.png";
 import MySQLLogo from "./assets/logo-mysql.png";
 import ShadcnLogo from "./assets/logo-shadcn.png";
@@ -122,6 +123,13 @@ export const projectsData: Project[] = [
     description: 'A job listing and application platform that connects job seekers with employers, featuring advanced search and application tracking functionalities.',
     imageUrl: JobFinder,
     technologies: ['Personal Project', 'PHP', 'Laravel 12', 'MySQL', 'Vue.js', 'axios', 'REST API', 'Tailwind CSS'],
+    url: '#'
+  },
+  {
+    title: 'Custom Content Management System (CMS) Application',
+    description: 'Content Management System (CMS) a web application that allows publishing, editing and modifying content, organizing, deleting as well as maintenance from a central interface.',
+    imageUrl: CmsUi,
+    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'Admin LTE', 'Bootstrap 4'],
     url: '#'
   },
   {
