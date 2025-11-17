@@ -123,7 +123,7 @@ export const projectsData: Project[] = [
     description: 'A job listing and application platform that connects job seekers with employers, featuring advanced search and application tracking functionalities.',
     imageUrl: JobFinder,
     technologies: ['Personal Project', 'PHP', 'Laravel 12', 'MySQL', 'Vue.js', 'axios', 'REST API', 'Tailwind CSS'],
-    url: '#'
+    url: 'https://job-navigator.netlify.app/'
   },
   {
     title: 'Custom Content Management System (CMS) Application',
