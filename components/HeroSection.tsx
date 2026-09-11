@@ -10,9 +10,9 @@ const HeroSection: React.FC = () => {
           <h3 className="text-lg text-accent mb-2">Hi, my name is</h3>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-100 mb-4">Cyrus Manatad</h1>
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-400 mb-1">Full-Stack Web Developer</h2>
-          <h3 className="text-lg text-accent mb-6">Laravel 12 | CodeIgniter 4 | MySQL | CSS | HTML | JavaScript</h3>
+          <h3 className="text-lg text-accent mb-6">Node.js | NestJS | TypeScript | React | Laravel 12 | CodeIgniter 4 | MySQL</h3>
           <p className="max-w-xl mx-auto md:mx-0 mb-8 text-justify text-gray-400">
-            I’m a passionate Full-Stack Web Developer with over 7 years of experience building scalable and intuitive web applications with clean, efficient code that makes real difference for users and businesses.
+            I’m a passionate Full-Stack Web Developer with over 8 years of experience building scalable and intuitive web applications with clean, efficient code that makes real difference for users and businesses.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
             <a href="#projects" className="bg-accent text-white font-semibold py-3 px-6 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 shadow-lg">

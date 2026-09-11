@@ -2,22 +2,24 @@
 
 ## 👩🏻‍💻 About<br/>
 
-I’m a passionate Web Developer with over 7 years of experience building and supporting web applications that make a real difference for users and businesses.
+I’m a passionate Web Developer with over 8 years of experience building and supporting web applications that make a real difference for users and businesses.
 
-I love creating clean, reliable, and scalable web solutions using PHP (CodeIgniter, Laravel), JavaScript, MySQL/MariaDB, and modern front-end tools like Bootstrap, Tailwind CSS, and ReactJS. Over the years, I’ve worked on projects that involve everything from custom CMS builds and API integrations (REST & SOAP) to Single Sign-On (SSO) setups with Azure Entra ID and LDAP.
+I love creating clean, reliable, and scalable web solutions using PHP (CodeIgniter, Laravel), Node.js (NestJS), JavaScript/TypeScript, MySQL/MariaDB, and modern front-end tools like Bootstrap, Tailwind CSS, and ReactJS. Over the years, I’ve worked on projects that involve everything from custom CMS builds and API integrations (REST & SOAP) to Single Sign-On (SSO) setups with Azure Entra ID and LDAP.
+
+These days I work mostly on the Node.js side, building NestJS services with TypeScript and Redis for high-volume transactional integrations, alongside a React back office where I focus on query optimization, user management, and role-based access.
 
 I’m also big on process efficiency, like using Docker, AWS, and GitLab CI/CD to ensure smoother deployments and consistent environments. I enjoy solving technical challenges, mentoring teammates, and improving systems so everything runs faster and smarter.
 
 I’m driven by curiosity and the desire to keep learning, whether it’s exploring new frameworks or finding creative ways to make web apps more intuitive and efficient.
 
 🛠️ Tech highlights:
-- PHP (Laravel, CodeIgniter), JS, HTML/CSS
+- PHP (Laravel, CodeIgniter), Node.js (NestJS), JS/TS, HTML/CSS
 - CMS development and API integrations
 - Git, Docker, GitLab CI/CD
 - AWS, Plesk, Linux/Windows server wrangling
 - Performance tuning with PageSpeed, GTMetrix, Pingdom
 
-# 💻 Tech Stack - LAMP
+# 💻 Tech Stack
 <!-- Badges from https://github.com/Ileriayo/markdown-badges -->
 ### Client Side (Front End)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -35,6 +37,8 @@ I’m driven by curiosity and the desire to keep learning, whether it’s explor
 ![Code-Igniter 3](https://img.shields.io/badge/CodeIgniter-3-%23EF4223.svg?style=for-the-badge&logo=codeIgniter&logoColor=white)
 ![Code-Igniter 4](https://img.shields.io/badge/CodeIgniter-4-%23EF4223.svg?style=for-the-badge&logo=codeIgniter&logoColor=white)
 ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![Node.js](https://img.shields.io/badge/node.js-6DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)
+![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)
@@ -43,6 +47,7 @@ I’m driven by curiosity and the desire to keep learning, whether it’s explor
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
 ### Cloud/Servers/Storage
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -59,6 +64,7 @@ I’m driven by curiosity and the desire to keep learning, whether it’s explor
 - Designed, built, tested, and deployed scalable, modular, and maintainable web applications across various platforms.
 - Developed and integrated APIs to sync data between CMS and mobile applications.
 - Built and maintained applications using MVC and PHP-based frameworks such as **CodeIgniter** and **Laravel**.
+- Built backend services with **Node.js** and **NestJS** in **TypeScript**, backed by **Redis**, for high-volume transactional integrations.
 
 ### ✅ Testing, Optimization & Performance
 - Conducted comprehensive website testing and troubleshooting before deployment to ensure a smooth user experience.

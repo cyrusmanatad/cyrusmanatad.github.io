@@ -24,7 +24,7 @@ export const skillsData: SkillCategory[] = [
   {
     category: 'Backend',
     skills: [
-      { name: 'PHP', iconUrl: PHPLogo }, { name: 'CodeIgniter', iconUrl: CILogo }, { name: 'Laravel' }, { name: 'MySQL 8', iconUrl: MySQLLogo }, { name: 'MariaDB' }, { name: 'postgresql' }, { name: 'sqlite' }
+      { name: 'PHP', iconUrl: PHPLogo }, { name: 'CodeIgniter', iconUrl: CILogo }, { name: 'Laravel' }, { name: 'Node.js' }, { name: 'NestJS' }, { name: 'MySQL 8', iconUrl: MySQLLogo }, { name: 'MariaDB' }, { name: 'postgresql' }, { name: 'sqlite' }, { name: 'Redis' }
     ],
   },
   {
@@ -49,9 +49,22 @@ export const skillsData: SkillCategory[] = [
 
 export const experienceData: Experience[] = [
   {
+    role: 'Full Stack Developer',
+    company: 'FYB Technologies, Inc.',
+    period: '2026 – Present',
+    description: 'Building and maintaining iGaming platform services, focusing on game operator integrations while supporting and optimizing the React-based back office application.',
+    responsibilities: [
+      'Developed and maintained integrations with game operators and providers, ensuring reliable data exchange and transaction flows.',
+      'Maintained and extended the back office application built with React, delivering new features and improving existing modules.',
+      'Optimized the transaction table for faster queries and smoother handling of high-volume records.',
+      'Enhanced the user module and role management, refining access control across the platform.',
+    ],
+    technologies: ['Node.js', 'NestJS', 'TypeScript', 'React', 'Redis', 'REST API'],
+  },
+  {
     role: 'Programmer/Analyst II',
     company: 'Vertere Global Solutions Inc.',
-    period: '2019 – Present',
+    period: '2019 – 2025',
     description: 'Led full-stack development of web applications and related APIs, integrated third-party APIs, use Docker in development and implemented CI/CD pipelines to streamline deployment processes.',
     responsibilities: [
       'Developed and maintained web applications using PHP (CodeIgniter, Laravel), JavaScript, and modern front-end frameworks.',

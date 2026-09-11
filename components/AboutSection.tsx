@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Section from './Section';
-import { CodeIcon, PhpIcon, CloudIcon } from './IconComponents';
+import { CodeIcon, PhpIcon, CloudIcon, NodeIcon } from './IconComponents';
 import Profile from '/assets/ui-portfolio-profile.png';
 import PHPLogo from "/assets/logo-php.png";
 
@@ -16,10 +16,13 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="md:col-span-3 md:px-8">
           <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
-            I love creating clean, reliable, and scalable web solutions using PHP (<b>CodeIgniter</b>, <b>Laravel</b>), <b>JavaScript</b>, <b>MySQL/MariaDB</b> , and modern front-end tools like <b>Bootstrap</b>, <b>Tailwind</b> <b>CSS</b>, <b>ReactJS</b>, and <b>Vue.js</b>.
+            I love creating clean, reliable, and scalable web solutions using PHP (<b>CodeIgniter</b>, <b>Laravel</b>), <b>Node.js</b> (<b>NestJS</b>), <b>JavaScript/TypeScript</b>, <b>MySQL/MariaDB</b> , and modern front-end tools like <b>Bootstrap</b>, <b>Tailwind</b> <b>CSS</b>, <b>ReactJS</b>, and <b>Vue.js</b>.
           </p>
           <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
             Over the years, I’ve worked on projects that involve everything from <b>brand sites</b>, <b>transactional application</b>, <b>custom CMS</b>, <b>API development and integrations</b> (<i>REST API</i>, <i>SOAP</i>, <i>XML</i>, <i>Oracle BI reports</i>). I've recently implemented the <b>Single Sign-On (SSO)</b> authentication method using <b>Azure Entra ID</b> and <b>LDAP</b> on some of the projects I'm working on.
+          </p>
+          <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
+            These days I work mostly on the <b>Node.js</b> side, building <b>NestJS</b> services with <b>TypeScript</b> and <b>Redis</b> for high-volume transactional integrations, alongside a <b>React</b> back office where I focus on query optimization, user management, and role-based access.
           </p>
           <p className="text-lg text-justify text-gray-400 mb-6 leading-relaxed">
             I'm focused on making the development process more efficient by using tools like <b>Docker</b>, <b>AWS</b>, and <b>GitLab</b> with <b>CI/CD</b> integration for smoother deployments and reliable environments. I enjoy solving technical problems, helping teammates improve technical skills, and improving systems to make everything run faster and better.
@@ -31,6 +34,10 @@ const AboutSection: React.FC = () => {
             <div className="flex items-center bg-navy-light p-3 rounded-md shadow-md">
               <CodeIcon className="w-6 h-6 mr-3 text-accent" />
               <span>Full-Stack Developer</span>
+            </div>
+            <div className="flex items-center bg-navy-light p-3 rounded-md shadow-md">
+              <NodeIcon className="w-6 h-6 mr-3 text-accent" />
+              <span>Node.js / NestJS</span>
             </div>
             <div className="flex items-center bg-navy-light p-3 rounded-md shadow-md">
               <img className="w-6 h-6 mr-3 text-accent" src={PHPLogo} alt="" />
