@@ -22,16 +22,6 @@ const capabilities = [
   { label: 'React / Vue', src: devicon('react') },
 ];
 
-const techStack = [
-  { label: 'Node.js', src: devicon('nodejs') },
-  { label: 'NestJS', src: devicon('nestjs') },
-  { label: 'TypeScript', src: devicon('typescript') },
-  { label: 'React', src: devicon('react') },
-  { label: 'Laravel 12', src: devicon('laravel') },
-  { label: 'CodeIgniter 4', src: devicon('codeigniter', 'plain') },
-  { label: 'MySQL', src: devicon('mysql') },
-];
-
 interface BadgeProps {
   label: string;
   src?: string;
@@ -81,16 +71,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
           </h1>
           <h2 className="mb-3 text-2xl font-semibold text-gray-400">Full-Stack Web Developer</h2>
           <p className="mb-4 max-w-prose text-sm leading-relaxed text-gray-400">
-            I’m a passionate Full-Stack Web Developer with over 8 years of experience building scalable and intuitive web applications with clean, efficient code that makes real difference for users and businesses.
+            Full-stack web developer with 8+ years of experience building scalable web applications, APIs, and business solutions using PHP, Node.js, React, and modern web technologies.
           </p>
           <div className="mb-2.5 flex flex-wrap gap-2">
             {capabilities.map((item) => (
               <Badge key={item.label} label={item.label} src={item.src} node={item.node} />
-            ))}
-          </div>
-          <div className="mb-5 flex flex-wrap gap-1.5">
-            {techStack.map((item) => (
-              <Badge key={item.label} label={item.label} src={item.src} small />
             ))}
           </div>
           <div className="flex flex-wrap gap-3">
