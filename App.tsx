@@ -14,8 +14,8 @@ import Footer from './components/Footer';
    Rows are implicit and auto-sized, so tiles grow to fit their content and the
    page scrolls. Experience spans two rows to pair against skills over contact. */
 const placement = {
-  hero: 'lg:col-start-1 lg:row-start-1 lg:col-span-5',
-  about: 'lg:col-start-6 lg:row-start-1 lg:col-span-7',
+  hero: 'lg:col-start-1 lg:row-start-1 lg:col-span-6',
+  about: 'lg:col-start-7 lg:row-start-1 lg:col-span-6',
   experience: 'lg:col-start-1 lg:row-start-2 lg:col-span-7 lg:row-span-2',
   skills: 'lg:col-start-8 lg:row-start-2 lg:col-span-5',
   contact: 'lg:col-start-8 lg:row-start-3 lg:col-span-5',
