@@ -9,33 +9,29 @@ interface ContactSectionProps {
 
 const ContactSection: React.FC<ContactSectionProps> = ({ className = '' }) => {
   return (
-    <Section id="contact" title="Let's Connect" className={className} scroll>
-      <div className="flex h-full flex-col justify-center gap-1.5">
-        <p className="text-[0.65rem] leading-snug text-gray-400">
+    <Section id="contact" title="Let's Connect" className={className}>
+      <div className="flex h-full flex-col justify-center gap-3">
+        <p className="text-sm leading-relaxed text-gray-400">
           Got a project or idea in mind? I'm always open to new opportunities and collaborations. Let’s bring it to life.
         </p>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-          <a href="mailto:cyrusmanatad227@gmail.com" className="flex items-center text-[0.65rem] text-gray-300 transition-colors duration-300 hover:text-accent">
-            <MailIcon className="mr-1.5 h-3.5 w-3.5" />
+        <div className="flex flex-col gap-2">
+          <a href="mailto:cyrusmanatad227@gmail.com" className="flex items-center text-sm text-gray-300 transition-colors duration-300 hover:text-accent">
+            <MailIcon className="mr-2.5 h-5 w-5 shrink-0" />
             cyrusmanatad227@gmail.com
           </a>
-          <a href="tel:+639970685424" className="flex items-center text-[0.65rem] text-gray-300 transition-colors duration-300 hover:text-accent">
-            <PhoneIcon className="mr-1.5 h-3.5 w-3.5" />
+          <a href="tel:+639970685424" className="flex items-center text-sm text-gray-300 transition-colors duration-300 hover:text-accent">
+            <PhoneIcon className="mr-2.5 h-5 w-5 shrink-0" />
             +63 997 068 5424
           </a>
-          <div className="flex items-center gap-3">
-            <a href="https://github.com/cyrusmanatad" aria-label="GitHub" className="text-gray-400 transition-colors duration-300 hover:text-accent">
-              <GithubIcon className="h-4 w-4" />
-            </a>
-            <a href="https://www.linkedin.com/in/camanatad/" aria-label="LinkedIn" className="text-gray-400 transition-colors duration-300 hover:text-accent">
-              <LinkedinIcon className="h-4 w-4" />
-            </a>
-          </div>
         </div>
-        {/* The standalone footer only renders on the stacked breakpoint. */}
-        <p className="hidden border-t border-navy-lighter/60 pt-1.5 text-[0.6rem] text-gray-500 lg:block">
-          &copy; {new Date().getFullYear()} Cyrus Manatad. All Rights Reserved.
-        </p>
+        <div className="flex items-center gap-4">
+          <a href="https://github.com/cyrusmanatad" aria-label="GitHub" className="text-gray-400 transition-colors duration-300 hover:text-accent hover:scale-110">
+            <GithubIcon className="h-6 w-6" />
+          </a>
+          <a href="https://www.linkedin.com/in/camanatad/" aria-label="LinkedIn" className="text-gray-400 transition-colors duration-300 hover:text-accent hover:scale-110">
+            <LinkedinIcon className="h-6 w-6" />
+          </a>
+        </div>
       </div>
     </Section>
   );

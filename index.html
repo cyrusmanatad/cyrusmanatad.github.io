@@ -13,21 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <style>
-        /* Shrinking the root size on wide screens scales every rem-based size at
-           once, which is what lets the whole board fit one viewport. Media query
-           rem units resolve against 16px, so Tailwind breakpoints are unaffected. */
         html {
             font-size: 16px;
-        }
-        @media (min-width: 1024px) {
-            html {
-                font-size: 13.5px;
-            }
-        }
-        @media (min-width: 1024px) and (min-height: 1000px) {
-            html {
-                font-size: 15px;
-            }
         }
         body {
             font-family: 'Poppins', sans-serif;
