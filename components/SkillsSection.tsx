@@ -17,8 +17,9 @@ const slugify = (name: string) =>
 const SkillChip: React.FC<{ skill: Skill }> = ({ skill }) => {
   const skillSlug = slugify(skill.name);
 
+  // Chip width fits the longest unbroken label so names never split mid-word.
   return (
-    <div className="flex w-12 flex-col items-center gap-1">
+    <div className="flex w-[4.4rem] flex-col items-center gap-1">
       <div className="flex items-center justify-center rounded-md bg-gray-200 p-1 shadow-sm transition-transform duration-200 hover:scale-110">
         <img
           src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skillSlug}/${skillSlug}-original.svg`}
@@ -33,7 +34,7 @@ const SkillChip: React.FC<{ skill: Skill }> = ({ skill }) => {
           title={skill.name}
         />
       </div>
-      <span className="w-full truncate text-center text-[0.6rem] leading-tight text-gray-400" title={skill.name}>
+      <span className="w-full text-center text-[0.6rem] leading-[1.15] break-words text-gray-400" title={skill.name}>
         {skill.name}
       </span>
     </div>

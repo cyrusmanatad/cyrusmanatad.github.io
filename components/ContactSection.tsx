@@ -9,7 +9,7 @@ interface ContactSectionProps {
 
 const ContactSection: React.FC<ContactSectionProps> = ({ className = '' }) => {
   return (
-    <Section id="contact" title="Let's Connect" className={className}>
+    <Section id="contact" title="Let's Connect" className={className} scroll>
       <div className="flex h-full flex-col justify-center gap-1.5">
         <p className="text-[0.65rem] leading-snug text-gray-400">
           Got a project or idea in mind? I'm always open to new opportunities and collaborations. Let’s bring it to life.

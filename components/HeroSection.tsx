@@ -9,7 +9,7 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
   return (
     <section id="home" className={`tile fade-in-up relative justify-center ${className}`}>
-      <HeroIllustration className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-20 lg:h-44 lg:w-44" />
+      <HeroIllustration className="pointer-events-none absolute -right-6 -top-6 hidden h-40 w-40 opacity-20 md:block lg:h-44 lg:w-44" />
       <div className="relative">
         <h3 className="mb-1 text-[0.7rem] uppercase tracking-[0.18em] text-accent">Hi, my name is</h3>
         <h1 className="mb-1 font-bold text-gray-100 text-[clamp(1.5rem,2.4vw+0.5rem,2.5rem)] leading-tight">
