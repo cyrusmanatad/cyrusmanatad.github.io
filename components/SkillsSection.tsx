@@ -1,56 +1,62 @@
+
 import React from 'react';
 import Section from './Section';
 import { skillsData } from '../constants';
-import { SkillCategory } from '../types';
+import { Skill, SkillCategory } from '../types';
 
-interface SkillCardProps {
-  category: SkillCategory;
+interface SkillsSectionProps {
+  className?: string;
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ category }) => (
-  <div className="bg-navy-light hover:bg-gray-500 p-6 rounded-lg shadow-lg transform">
-    <h3 className="text-xl text-center font-bold text-accent mb-6">{category.category}</h3>
-    <div className="flex justify-center flex-wrap gap-3">
-      {category.skills.map((skill) => {
-        const skillSlug = skill.name
-          .toLowerCase()
-          .replace(/\s|\+|\./g, '')
-          .replace(/&/g, 'and'); // normalize filenames like 'c++' or 'vue.js'
+const slugify = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/\s|\+|\./g, '')
+    .replace(/&/g, 'and'); // normalize filenames like 'c++' or 'vue.js'
 
-        return (
-          <div className="flex flex-col items-center space-y-2" key={skill.name}>
-          <div
-            key={skill.name}
-            className="flex items-center justify-center bg-gray-200 rounded-lg p-2 shadow-md hover:scale-105 transition-transform duration-200"
-          >
-            <img
-              src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skillSlug}/${skillSlug}-original.svg`}
-              alt={skill.name}
-              key={skill.name + '-icon'}
-              className="w-20 h-20 object-contain"
-              onError={(e) => {
-                // fallback if no logo found
-                (e.target as HTMLImageElement).src = skill.iconUrl ?? `https://img.shields.io/badge/${encodeURIComponent(
-                  skill.name
-                )}-grey?style=for-the-badge&logo=${encodeURIComponent(skillSlug)}&logoColor=white`;
-              }}
-              title={skill.name}
-            />
-          </div>
-          <span key={skill.name + '-name'} className="bg-navy-lighter text-gray-300 text-sm font-medium px-3 py-1 rounded-full">{skill.name}</span>
-          </div>
-        );
-      })}
+const SkillChip: React.FC<{ skill: Skill }> = ({ skill }) => {
+  const skillSlug = slugify(skill.name);
+
+  return (
+    <div className="flex w-12 flex-col items-center gap-1">
+      <div className="flex items-center justify-center rounded-md bg-gray-200 p-1 shadow-sm transition-transform duration-200 hover:scale-110">
+        <img
+          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skillSlug}/${skillSlug}-original.svg`}
+          alt={skill.name}
+          className="h-7 w-7 object-contain"
+          onError={(e) => {
+            // fallback if no logo found
+            (e.target as HTMLImageElement).src = skill.iconUrl ?? `https://img.shields.io/badge/${encodeURIComponent(
+              skill.name
+            )}-grey?style=for-the-badge&logo=${encodeURIComponent(skillSlug)}&logoColor=white`;
+          }}
+          title={skill.name}
+        />
+      </div>
+      <span className="w-full truncate text-center text-[0.6rem] leading-tight text-gray-400" title={skill.name}>
+        {skill.name}
+      </span>
+    </div>
+  );
+};
+
+const SkillBand: React.FC<{ category: SkillCategory }> = ({ category }) => (
+  <div>
+    <h3 className="mb-1.5 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-accent">{category.category}</h3>
+    <div className="flex flex-wrap gap-x-2 gap-y-1.5">
+      {category.skills.map((skill) => (
+        <SkillChip key={skill.name} skill={skill} />
+      ))}
     </div>
   </div>
 );
 
-const SkillsSection: React.FC = () => {
+const SkillsSection: React.FC<SkillsSectionProps> = ({ className = '' }) => {
   return (
-    <Section id="skills" title="Tech Stack & Skills">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <Section id="skills" title="Tech Stack & Skills" className={className} scroll>
+      <div className="space-y-2.5">
         {skillsData.map((category) => (
-          <SkillCard key={category.category} category={category} />
+          <SkillBand key={category.category} category={category} />
         ))}
       </div>
     </Section>

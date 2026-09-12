@@ -2,29 +2,33 @@
 import React from 'react';
 import { HeroIllustration } from './IconComponents';
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  className?: string;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center fade-in-up">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        <div className="text-center md:text-left">
-          <h3 className="text-lg text-accent mb-2">Hi, my name is</h3>
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-100 mb-4">Cyrus Manatad</h1>
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-400 mb-1">Full-Stack Web Developer</h2>
-          <h3 className="text-lg text-accent mb-6">Node.js | NestJS | TypeScript | React | Laravel 12 | CodeIgniter 4 | MySQL</h3>
-          <p className="max-w-xl mx-auto md:mx-0 mb-8 text-justify text-gray-400">
-            I’m a passionate Full-Stack Web Developer with over 8 years of experience building scalable and intuitive web applications with clean, efficient code that makes real difference for users and businesses.
-          </p>
-          <div className="flex justify-center md:justify-start space-x-4">
-            <a href="#projects" className="bg-accent text-white font-semibold py-3 px-6 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 shadow-lg">
-              View Projects
-            </a>
-            <a href="#contact" className="border-2 border-accent text-accent font-semibold py-3 px-6 rounded-md hover:bg-accent hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Contact Me
-            </a>
-          </div>
-        </div>
-        <div className="hidden md:block">
-          <HeroIllustration />
+    <section id="home" className={`tile fade-in-up relative justify-center ${className}`}>
+      <HeroIllustration className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-20 lg:h-44 lg:w-44" />
+      <div className="relative">
+        <h3 className="mb-1 text-[0.7rem] uppercase tracking-[0.18em] text-accent">Hi, my name is</h3>
+        <h1 className="mb-1 font-bold text-gray-100 text-[clamp(1.5rem,2.4vw+0.5rem,2.5rem)] leading-tight">
+          Cyrus Manatad
+        </h1>
+        <h2 className="mb-1 text-base font-semibold text-gray-400 lg:text-lg">Full-Stack Web Developer</h2>
+        <h3 className="mb-2 text-[0.7rem] leading-snug text-accent">
+          Node.js | NestJS | TypeScript | React | Laravel 12 | CodeIgniter 4 | MySQL
+        </h3>
+        <p className="mb-3 max-w-prose text-xs leading-snug text-gray-400">
+          I’m a passionate Full-Stack Web Developer with over 8 years of experience building scalable and intuitive web applications with clean, efficient code that makes real difference for users and businesses.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          <a href="#projects" className="rounded-md bg-accent px-3 py-1.5 text-[0.7rem] font-semibold text-white shadow-md transition-all duration-300 hover:bg-opacity-80">
+            View Projects
+          </a>
+          <a href="#contact" className="rounded-md border border-accent px-3 py-1.5 text-[0.7rem] font-semibold text-accent shadow-md transition-all duration-300 hover:bg-accent hover:text-white">
+            Contact Me
+          </a>
         </div>
       </div>
     </section>
