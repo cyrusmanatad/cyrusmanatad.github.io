@@ -7,3 +7,71 @@
     --color-navy-light: #112240;
     --color-navy-lighter: #1d2d50;
 }
+
+/* Tiles are grid children that must be allowed to shrink below their content
+   size, otherwise the board grows past the viewport and the page scrolls. */
+@utility tile {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid color-mix(in srgb, var(--color-navy-lighter) 70%, transparent);
+    background-color: var(--color-navy-light);
+    padding: 0.75rem;
+    box-shadow: 0 4px 16px -8px rgb(0 0 0 / 0.6);
+}
+
+@utility tile-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-navy-lighter) transparent;
+}
+
+.tile-body::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.tile-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tile-body::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: var(--color-navy-lighter);
+}
+
+.tile-body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-accent);
+}
+
+/* Nav links still resolve to tile ids, so highlight whichever tile is targeted
+   instead of scrolling to it. */
+.tile:target {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent), 0 4px 16px -8px rgb(0 0 0 / 0.6);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up {
+        animation: none;
+    }
+}

@@ -4,54 +4,56 @@ import Section from './Section';
 import { experienceData } from '../constants';
 import { Experience } from '../types';
 
-interface TimelineItemProps {
-  experience: Experience;
+interface ExperienceSectionProps {
+  className?: string;
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ experience }) => (
-  <div className="mb-10 ml-6">
-    <span className="absolute animate-pulse flex items-center justify-center w-6 h-6 bg-accent rounded-full -left-3 ring-8 ring-navy-light">
-      <svg className="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z"/>
-        <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-      </svg>
-    </span>
-    <div className="bg-navy-light text-justify p-6 rounded-lg shadow-lg">
-      <div className="flex flex-col justify-center md:justify-start md:flex-row md:items-start mb-4">
-        <h3 className="mb-1 text-xl text-center font-semibold text-white">
-          {experience.role} 
-        </h3>
-        <span className="ml-2 text-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full bg-blue-900 border border-blue-400">
+const TimelineItem: React.FC<{ experience: Experience }> = ({ experience }) => (
+  <div className="relative mb-3 ml-4 last:mb-0">
+    <span className="absolute -left-[1.4rem] top-1 h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-navy-light" />
+    <div className="rounded-md bg-navy-lighter/40 p-2.5">
+      <div className="mb-1 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+        <h3 className="text-xs font-semibold text-white">{experience.role}</h3>
+        <span className="rounded-full border border-blue-400/60 bg-blue-900/50 px-1.5 py-px text-[0.6rem] text-gray-300">
           {experience.company}
         </span>
+        <time className="text-[0.6rem] text-gray-500">{experience.period}</time>
       </div>
-      <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{experience.period}</time>
-      <p className="mb-4 text-base font-normal text-gray-400">{experience.description}</p>
-      <div>
-        {experience.responsibilities && (
-          <div className="mb-4">
-            <h4 className="text-md font-semibold text-white mb-2">Key Responsibilities:</h4>
-            <ul className="list-disc list-outside pl-4 py-2 text-gray-400">
-              {experience.responsibilities.map((item :string , index: number) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
-      <div className="flex flex-wrap gap-2">
+      <p className="mb-1.5 text-[0.7rem] leading-snug text-gray-400">{experience.description}</p>
+      {experience.responsibilities && (
+        <details className="group mb-1.5">
+          <summary className="flex w-fit cursor-pointer list-none items-center gap-1 text-[0.65rem] font-semibold text-accent hover:underline">
+            <svg
+              className="h-2.5 w-2.5 transition-transform duration-200 group-open:rotate-90"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={3}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+            Key Responsibilities
+          </summary>
+          <ul className="mt-1 list-outside list-disc space-y-0.5 pl-4 text-[0.65rem] leading-snug text-gray-400">
+            {experience.responsibilities.map((item: string, index: number) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </details>
+      )}
+      <div className="flex flex-wrap gap-1">
         {experience.technologies.map((tech) => (
-          <span key={tech} className="text-xs font-medium px-2.5 py-0.5 rounded bg-gray-700 text-gray-300">{tech}</span>
+          <span key={tech} className="rounded bg-gray-700/70 px-1.5 py-px text-[0.6rem] text-gray-300">{tech}</span>
         ))}
       </div>
     </div>
   </div>
 );
 
-const ExperienceSection: React.FC = () => {
+const ExperienceSection: React.FC<ExperienceSectionProps> = ({ className = '' }) => {
   return (
-    <Section id="experience" title="Work Experience">
-      <div className="relative border-l border-gray-700 max-w-3xl mx-auto">
+    <Section id="experience" title="Work Experience" className={className} scroll>
+      <div className="border-l border-gray-700 pl-1">
         {experienceData.map((exp, index) => (
           <TimelineItem key={index} experience={exp} />
         ))}

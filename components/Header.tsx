@@ -14,6 +14,7 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // The board cannot scroll on desktop, so this only drives the mobile bar.
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -23,18 +24,31 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-navy-light/80 shadow-lg backdrop-blur-sm' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-6 md:px-10 lg:px-20">
-        <div className="flex justify-between items-center py-4">
-          <a href="#" className="text-2xl font-bold text-accent">
-            <img src={Logo} alt="Cyrus Logo" className="max-w-10" />
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:static lg:h-11 lg:bg-navy-light/80 lg:shadow-none lg:backdrop-blur-none ${
+        isScrolled ? 'bg-navy-light/80 shadow-lg backdrop-blur-sm' : 'bg-transparent'
+      }`}
+    >
+      <div className="px-4 lg:h-full lg:px-3">
+        <div className="flex items-center justify-between py-3 lg:h-full lg:py-0">
+          <a href="#" className="flex items-center gap-2 text-accent">
+            <img src={Logo} alt="Cyrus Logo" className="w-9 lg:w-6" />
+            <span className="hidden text-[0.7rem] font-bold uppercase tracking-[0.18em] text-gray-200 lg:inline">
+              Cyrus Manatad
+            </span>
           </a>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex md:items-center md:gap-6 lg:gap-4">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="text-gray-300 hover:text-accent transition-colors duration-300">{link.name}</a>
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-xs text-gray-400 transition-colors duration-300 hover:text-accent lg:text-[0.7rem] lg:uppercase lg:tracking-[0.12em]"
+              >
+                {link.name}
+              </a>
             ))}
           </nav>
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden z-50">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden z-50" aria-label="Toggle menu">
             <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
