@@ -20,12 +20,15 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = '' }) => {
   return (
     <Section id="about" title="About Me" className={className}>
       <div className="mb-5 flex flex-col items-start gap-4 sm:flex-row">
+        {/* 7/9 matches the source image's 896x1152, so object-cover crops nothing.
+            Scaling from the top-left corner grows the portrait over the badges
+            rather than past the tile's left edge, and leaves the layout untouched. */}
         <img
           src={Profile}
           alt="Cyrus Manatad"
-          className="h-28 w-28 shrink-0 rounded-lg object-cover object-top shadow-md grayscale transition-all duration-500 hover:grayscale-0"
+          className="relative z-10 aspect-[7/9] w-40 shrink-0 origin-top-left rounded-lg object-cover shadow-lg ring-1 ring-navy-lighter grayscale transition-all duration-500 ease-out hover:scale-[1.4] hover:grayscale-0 hover:shadow-2xl hover:ring-2 hover:ring-accent motion-reduce:transition-none"
         />
-        <div className="grid flex-1 grid-cols-1 gap-2 sm:grid-cols-2">
+        <div className="grid flex-1 grid-cols-1 gap-2 sm:grid-cols-2 sm:content-evenly sm:self-stretch">
           {badges.map((badge) => (
             <div key={badge.label} className="flex items-center rounded-md bg-navy-lighter/60 px-3 py-2 shadow-sm">
               {badge.icon}
