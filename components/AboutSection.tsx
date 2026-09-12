@@ -1,42 +1,14 @@
 
 import React from 'react';
 import Section from './Section';
-import { CodeIcon, CloudIcon, NodeIcon } from './IconComponents';
-import Profile from '/assets/ui-portfolio-profile.png';
-import PHPLogo from "/assets/logo-php.png";
 
 interface AboutSectionProps {
   className?: string;
 }
 
-const badges = [
-  { label: 'Full-Stack Developer', icon: <CodeIcon className="mr-2 h-5 w-5 shrink-0 text-accent" /> },
-  { label: 'Node.js / NestJS', icon: <NodeIcon className="mr-2 h-5 w-5 shrink-0 text-accent" /> },
-  { label: 'PHP Expert', icon: <img className="mr-2 h-5 w-5 shrink-0 object-contain" src={PHPLogo} alt="" /> },
-  { label: 'AWS/Plesk Experience', icon: <CloudIcon className="mr-2 h-5 w-5 shrink-0 text-accent" /> },
-];
-
 const AboutSection: React.FC<AboutSectionProps> = ({ className = '' }) => {
   return (
     <Section id="about" title="About Me" className={className}>
-      <div className="mb-5 flex flex-col items-start gap-4 sm:flex-row">
-        {/* 7/9 matches the source image's 896x1152, so object-cover crops nothing.
-            Scaling from the top-left corner grows the portrait over the badges
-            rather than past the tile's left edge, and leaves the layout untouched. */}
-        <img
-          src={Profile}
-          alt="Cyrus Manatad"
-          className="relative z-10 aspect-[7/9] w-40 shrink-0 origin-top-left rounded-lg object-cover shadow-lg ring-1 ring-navy-lighter grayscale transition-all duration-500 ease-out hover:scale-[1.4] hover:grayscale-0 hover:shadow-2xl hover:ring-2 hover:ring-accent motion-reduce:transition-none"
-        />
-        <div className="grid flex-1 grid-cols-1 gap-2 sm:grid-cols-2 sm:content-evenly sm:self-stretch">
-          {badges.map((badge) => (
-            <div key={badge.label} className="flex items-center rounded-md bg-navy-lighter/60 px-3 py-2 shadow-sm">
-              {badge.icon}
-              <span className="text-sm leading-tight text-gray-300">{badge.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
       {/* Two columns on wide screens keep the line length readable in this wide tile. */}
       <div className="space-y-3 text-sm leading-relaxed text-gray-400 xl:columns-2 xl:gap-10 xl:space-y-0 xl:[&>p]:mb-3 [&_b]:text-gray-300">
         <p>
