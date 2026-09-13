@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CodeIcon, HeroIllustration } from './IconComponents';
+import { CodeIcon, HeroIllustration, OvhIcon } from './IconComponents';
 import Profile from '/assets/ui-portfolio-profile.png';
 import AwsLogo from '/assets/logo-aws.png';
 
@@ -19,6 +19,7 @@ const capabilities = [
   { label: 'Node.js / NestJS', src: devicon('nodejs') },
   { label: 'PHP Expert', src: devicon('php') },
   { label: 'AWS / Plesk', src: AwsLogo },
+  { label: 'OVH Cloud', node: <OvhIcon className="h-4 w-4 text-accent" /> },
   { label: 'React / Vue', src: devicon('react') },
 ];
 
