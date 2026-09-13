@@ -19,6 +19,8 @@ import ViteLogo from "./assets/logo-vite.png";
 import TsLogo from "./assets/logo-ts.png";
 import NpmLogo from "./assets/logo-npm.png";
 import PHPLogo from "./assets/logo-php.png";
+import OvhLogo from "./assets/logo-ovh.svg";
+import TradingApp from "./assets/ui-trading-app.png";
 
 export const skillsData: SkillCategory[] = [
   {
@@ -36,7 +38,7 @@ export const skillsData: SkillCategory[] = [
   {
     category: 'DevOps & Tools',
     skills: [
-      { name: 'Docker' }, { name: 'Git' }, { name: 'GitLab' }, { name: 'Github' }, { name: 'Apache' }, { name: 'Nginx' }, { name: 'cpanel' }, { name: 'Plesk', iconUrl : PleskLogo }, { name: 'AWS', iconUrl: AwsLogo }, { name: 'linux' }
+      { name: 'Docker' }, { name: 'Git' }, { name: 'GitLab' }, { name: 'Github' }, { name: 'Apache' }, { name: 'Nginx' }, { name: 'cpanel' }, { name: 'Plesk', iconUrl : PleskLogo }, { name: 'AWS', iconUrl: AwsLogo }, { name: 'linux' }, { name: 'OVH Cloud', iconUrl: OvhLogo }, { name: 'Cloudflare' }
     ],
   },
   // {
@@ -103,6 +105,13 @@ export const experienceData: Experience[] = [
 ];
 
 export const projectsData: Project[] = [
+  {
+    title: 'Trading App',
+    description: 'A real-time trade blotter that streams live order flow over WebSockets, with buy/sell volume and gross notional aggregates, side and status filters, symbol search, and amend or cancel actions on every trade.',
+    imageUrl: TradingApp,
+    technologies: ['Personal Project', 'React', 'Vite', 'Tailwind CSS', 'NestJS', 'Socket.IO', 'JWT', 'MySQL', 'Docker', 'OVH Cloud', 'Cloudflare'],
+    url: 'https://trading-app.cyrusmanatad.com/'
+  },
   {
     title: 'Unahco Order Entry Application',
     description: 'A comprehensive system for managing sales orders with seamless integration with Oracle databases.',
