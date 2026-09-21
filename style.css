@@ -2,10 +2,22 @@
 @custom-variant hover (&:hover);
 
 @theme {
+    /* Same blue this site has always used. The darker tone is the one that
+       actually reads on paper, so text uses accent-ink and only small marks
+       get the original. */
     --color-accent: #2D9CDB;
-    --color-navy: #0a192f;
-    --color-navy-light: #112240;
-    --color-navy-lighter: #1d2d50;
+    --color-accent-ink: #1B6FA8;
+
+    /* Warm neutrals rather than true grays, so white surfaces sit on the page
+       instead of disappearing into it. */
+    --color-paper: #F5F5F3;
+    --color-paper-dim: #EDEDE9;
+    --color-surface: #FFFFFF;
+    --color-ink: #171716;
+    --color-ink-soft: #3D3D3A;
+    --color-muted: #6B6B66;
+    --color-line: #DCDCD7;
+    --color-line-soft: #E7E7E2;
 }
 
 @utility tile {
@@ -13,11 +25,12 @@
     flex-direction: column;
     min-width: 0;
     overflow: hidden;
-    border-radius: 0.5rem;
-    border: 1px solid color-mix(in srgb, var(--color-navy-lighter) 70%, transparent);
-    background-color: var(--color-navy-light);
+    border-radius: 3px;
+    border: 1px solid var(--color-line-soft);
+    background-color: var(--color-surface);
     padding: 1.25rem;
-    box-shadow: 0 4px 16px -8px rgb(0 0 0 / 0.6);
+    /* Just enough to lift the sheet off the page; the border does the work. */
+    box-shadow: 0 1px 2px rgb(23 23 22 / 0.03);
     /* Clears the sticky header when a nav anchor scrolls a tile into view. */
     scroll-margin-top: 4.5rem;
 }
@@ -26,15 +39,25 @@
     flex: 1 1 auto;
 }
 
+@media (min-width: 1024px) {
+    .tile {
+        padding: 1.75rem 1.875rem;
+    }
+}
+
 .tile:target {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 1px var(--color-accent), 0 4px 16px -8px rgb(0 0 0 / 0.6);
+    border-color: color-mix(in srgb, var(--color-accent) 40%, var(--color-line));
+}
+
+::selection {
+    background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
+    color: var(--color-ink);
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(12px);
+        transform: translateY(8px);
     }
     to {
         opacity: 1;

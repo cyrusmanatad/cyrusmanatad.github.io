@@ -10,7 +10,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = '' }) => {
   return (
     <Section id="about" title="About Me" className={className}>
       {/* Two columns on wide screens keep the line length readable in this wide tile. */}
-      <div className="space-y-4 text-sm leading-relaxed text-gray-400 [&_b]:text-gray-200">
+      <div className="space-y-4 text-sm leading-[1.75] text-ink-soft [&_b]:font-semibold [&_b]:text-ink">
         <p>
           I’m a <b>full-stack web developer with over 8 years of experience</b> building
           scalable web applications, APIs, and business solutions. My background spans
