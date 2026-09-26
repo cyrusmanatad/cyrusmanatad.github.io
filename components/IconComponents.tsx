@@ -63,24 +63,20 @@ export const PhoneIcon: React.FC<IconProps> = ({ className }) => (
 );
 
 export const HeroIllustration: React.FC<IconProps> = ({ className }) => (
+    /* The blob is now a flat paper tint rather than a gradient, so what reads is
+       the handwritten-looking code fragments and not the shape behind them. */
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className={className}>
-        <defs>
-            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#2D9CDB', stopOpacity:1}} />
-            <stop offset="100%" style={{stopColor: '#112240', stopOpacity:1}} />
-            </linearGradient>
-        </defs>
-        <path fill="url(#grad1)" d="M40.3,-70.1C53,-61.8,64.7,-51.7,71.7,-38.9C78.7,-26.1,81,-10.6,76.5,-3.2C72,4.2,60.7,13.4,52.8,24.1C44.9,34.8,40.4,47,32,56.7C23.6,66.4,11.8,73.6,-1.3,75.4C-14.4,77.2,-28.8,73.6,-42.2,66.8C-55.6,60,-68.1,49.9,-75.3,37.1C-82.5,24.3,-84.5,8.8,-80.7,-4.3C-76.9,-17.4,-67.3,-28.1,-57,-37.7C-46.7,-47.3,-35.7,-55.8,-23.7,-64.1C-11.7,-72.4,-5.9,-80.6,2.7,-84.1C11.2,-87.6,22.4,-86.3,31.7,-80.7C41.1,-75.1,48.7,-78.3,40.3,-70.1Z" transform="translate(100 100)" />
-        <text x="50" y="95" fontFamily="monospace" fontSize="12" fill="#e6f1ff" transform="rotate(-15 50 100)">
+        <path fill="#F6F6F2" d="M40.3,-70.1C53,-61.8,64.7,-51.7,71.7,-38.9C78.7,-26.1,81,-10.6,76.5,-3.2C72,4.2,60.7,13.4,52.8,24.1C44.9,34.8,40.4,47,32,56.7C23.6,66.4,11.8,73.6,-1.3,75.4C-14.4,77.2,-28.8,73.6,-42.2,66.8C-55.6,60,-68.1,49.9,-75.3,37.1C-82.5,24.3,-84.5,8.8,-80.7,-4.3C-76.9,-17.4,-67.3,-28.1,-57,-37.7C-46.7,-47.3,-35.7,-55.8,-23.7,-64.1C-11.7,-72.4,-5.9,-80.6,2.7,-84.1C11.2,-87.6,22.4,-86.3,31.7,-80.7C41.1,-75.1,48.7,-78.3,40.3,-70.1Z" transform="translate(100 100)" />
+        <text x="50" y="95" fontFamily="monospace" fontSize="12" fill="#BEBEB7" transform="rotate(-15 50 100)">
             &lt;div&gt;
         </text>
-        <text x="130" y="140" fontFamily="monospace" fontSize="12" fill="#e6f1ff" transform="rotate(25 150 120)">
+        <text x="130" y="140" fontFamily="monospace" fontSize="12" fill="#C6C6BF" transform="rotate(25 150 120)">
             const dev = "Cyrus";
         </text>
-        <text x="40" y="160" fontFamily="monospace" fontSize="12" fill="#2D9CDB" transform="rotate(5 50 150)">
+        <text x="40" y="160" fontFamily="monospace" fontSize="12" fill="#AECBDD" transform="rotate(5 50 150)">
             function()
         </text>
-         <text x="120" y="60" fontFamily="monospace" fontSize="12" fill="#ccd6f6" transform="rotate(-5 100 50)">
+         <text x="120" y="60" fontFamily="monospace" fontSize="12" fill="#CCCCC5" transform="rotate(-5 100 50)">
             {'/>'}
         </text>
     </svg>

@@ -15,11 +15,11 @@ const devicon = (name: string, variant = 'original') =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-${variant}.svg`;
 
 const capabilities = [
-  { label: 'Full-Stack Developer', node: <CodeIcon className="h-4 w-4 text-accent" /> },
+  { label: 'Full-Stack Developer', node: <CodeIcon className="h-4 w-4 text-accent-ink" /> },
   { label: 'Node.js / NestJS', src: devicon('nodejs') },
   { label: 'PHP Expert', src: devicon('php') },
   { label: 'AWS / Plesk', src: AwsLogo },
-  { label: 'OVH Cloud', node: <OvhIcon className="h-4 w-4 text-accent" /> },
+  { label: 'OVH Cloud', node: <OvhIcon className="h-4 w-4 text-accent-ink" /> },
   { label: 'React / Vue', src: devicon('react') },
 ];
 
@@ -32,7 +32,7 @@ interface BadgeProps {
 
 const Badge: React.FC<BadgeProps> = ({ label, src, node, small = false }) => (
   <span
-    className={`inline-flex items-center gap-1.5 rounded-full border border-navy-lighter bg-navy-lighter/50 shadow-sm transition-colors duration-300 hover:border-accent/60 hover:bg-navy-lighter ${
+    className={`inline-flex items-center gap-1.5 rounded-full border border-line bg-paper transition-colors duration-200 hover:border-muted/50 hover:bg-paper-dim ${
       small ? 'px-2.5 py-1' : 'px-3 py-1.5'
     }`}
   >
@@ -48,42 +48,42 @@ const Badge: React.FC<BadgeProps> = ({ label, src, node, small = false }) => (
         }}
       />
     )}
-    <span className={`font-medium text-gray-300 ${small ? 'text-xs' : 'text-sm'}`}>{label}</span>
+    <span className={`font-medium text-ink-soft ${small ? 'text-xs' : 'text-sm'}`}>{label}</span>
   </span>
 );
 
 const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
   return (
     <section id="home" className={`tile fade-in-up relative justify-center ${className}`}>
-      <HeroIllustration className="pointer-events-none absolute -right-8 -top-8 hidden h-56 w-56 opacity-20 md:block" />
-      <div className="relative flex flex-col gap-5 sm:flex-row sm:items-start">
+      <HeroIllustration className="pointer-events-none absolute -right-10 -top-10 hidden h-52 w-52 md:block" />
+      <div className="relative flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-7">
         {/* 7/9 matches the source image's 896x1152, so object-cover crops nothing.
             Scaling from the top-left corner grows the portrait over the copy
             rather than past the tile's left edge, and leaves the layout untouched. */}
         <img
           src={Profile}
           alt="Cyrus Manatad"
-          className="relative z-10 aspect-[7/9] w-40 shrink-0 origin-top-left rounded-lg object-cover shadow-lg ring-1 ring-navy-lighter grayscale transition-all duration-500 ease-out hover:scale-[1.4] hover:grayscale-0 hover:shadow-2xl hover:ring-2 hover:ring-accent motion-reduce:transition-none"
+          className="relative z-10 aspect-[7/9] w-40 shrink-0 origin-top-left rounded-[3px] object-cover ring-1 ring-line grayscale transition-all duration-500 ease-out hover:scale-[1.4] hover:grayscale-0 hover:shadow-xl hover:shadow-ink/10 hover:ring-muted/40 motion-reduce:transition-none"
         />
         <div className="min-w-0 flex-1">
-          <h3 className="mb-1.5 text-sm uppercase tracking-[0.18em] text-accent">Hi, my name is</h3>
-          <h1 className="mb-1.5 font-bold text-gray-100 text-[clamp(2.25rem,3vw+1rem,3.75rem)] leading-tight">
+          <h3 className="mb-2 text-xs uppercase tracking-[0.2em] text-accent-ink">Hi, my name is</h3>
+          <h1 className="mb-1 font-semibold text-ink text-[clamp(2rem,2.2vw+1rem,3rem)] leading-[1.08]">
             Cyrus Manatad
           </h1>
-          <h2 className="mb-3 text-2xl font-semibold text-gray-400">Full-Stack Web Developer</h2>
-          <p className="mb-4 max-w-prose text-sm leading-relaxed text-gray-400">
+          <h2 className="mb-4 text-xl font-normal text-muted">Full-Stack Web Developer</h2>
+          <p className="mb-5 max-w-[46ch] text-sm leading-relaxed text-ink-soft">
             Full-stack web developer with 8+ years of experience building scalable web applications, APIs, and business solutions using PHP, Node.js, React, and modern web technologies.
           </p>
-          <div className="mb-2.5 flex flex-wrap gap-2">
+          <div className="mb-5 flex flex-wrap gap-2">
             {capabilities.map((item) => (
               <Badge key={item.label} label={item.label} src={item.src} node={item.node} />
             ))}
           </div>
-          <div className="flex flex-wrap gap-3">
-            <a href="#projects" className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-opacity-80 hover:scale-105">
+          <div className="flex flex-wrap gap-2.5">
+            <a href="#projects" className="rounded-[3px] bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors duration-200 hover:bg-ink-soft">
               View Projects
             </a>
-            <a href="#contact" className="rounded-md border-2 border-accent px-5 py-2.5 text-sm font-semibold text-accent shadow-lg transition-all duration-300 hover:bg-accent hover:text-white hover:scale-105">
+            <a href="#contact" className="rounded-[3px] border border-line px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-muted/50 hover:bg-paper-dim">
               Contact Me
             </a>
           </div>

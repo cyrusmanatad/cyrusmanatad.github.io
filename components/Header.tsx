@@ -1,6 +1,7 @@
-
-import React, { useState, useEffect } from 'react';
-import Logo from '/assets/android-chrome-192x192.png';
+import React, { useEffect, useState } from 'react';
+import { GithubIcon, LinkedinIcon } from './IconComponents';
+import Profile from '/assets/ui-portfolio-profile.png';
+import Cv from '/assets/cyrusmanatad_cv.pdf';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -10,60 +11,136 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
+const sectionIds = navLinks.map((link) => link.href.slice(1));
+
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeId, setActiveId] = useState(sectionIds[0]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    const updateActive = () => {
+      const lastId = sectionIds[sectionIds.length - 1];
+      const lastSection = document.getElementById(lastId);
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 120;
+      const lastRect = lastSection?.getBoundingClientRect();
+      const lastOnScreen =
+        lastRect !== undefined &&
+        lastRect.top < window.innerHeight * 0.85 &&
+        lastRect.bottom > window.innerHeight * 0.45;
+
+      if (nearBottom || lastOnScreen) {
+        setActiveId(lastId);
+        return;
+      }
+
+      const marker = window.innerHeight * 0.35;
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= marker) {
+          current = id;
+        }
+      }
+      setActiveId(current);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    const observer = new IntersectionObserver(updateActive, {
+      rootMargin: '-10% 0px -40% 0px',
+      threshold: [0, 0.1, 0.25, 0.5],
+    });
+
+    sections.forEach((section) => observer.observe(section));
+    updateActive();
+    window.addEventListener('scroll', updateActive, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', updateActive);
+    };
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:sticky lg:h-14 ${
-        isScrolled ? 'bg-navy-light/80 shadow-lg backdrop-blur-sm' : 'bg-transparent lg:bg-navy-light/80 lg:backdrop-blur-sm'
-      }`}
-    >
-      <div className="px-4 lg:h-full">
-        <div className="flex items-center justify-between py-3 lg:h-full lg:py-0">
-          <a href="#" className="flex items-center gap-2.5 text-accent">
-            <img src={Logo} alt="Cyrus Logo" className="w-9 lg:w-8" />
-            <span className="hidden text-sm font-bold uppercase tracking-[0.18em] text-gray-200 lg:inline">
-              Cyrus Manatad
-            </span>
-          </a>
-          <nav className="hidden md:flex md:items-center md:gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm text-gray-400 transition-colors duration-300 hover:text-accent lg:uppercase lg:tracking-[0.12em]"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden z-50" aria-label="Toggle menu">
-            <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-              )}
-            </svg>
-          </button>
+    <header className="flex flex-col lg:sticky lg:top-0 lg:h-screen lg:w-[25rem] lg:shrink-0 lg:justify-between lg:overflow-y-auto lg:py-16">
+      <div>
+        <div className="relative mb-6 flex h-36 justify-center">
+          <img
+            src={Profile}
+            alt="Cyrus Manatad"
+            className="z-10 h-36 w-36 origin-center rounded-full object-cover object-[center_18%] grayscale ring-1 ring-white/15 transition-all duration-500 ease-out hover:z-20 hover:scale-[1.6] hover:grayscale-0 hover:shadow-xl hover:shadow-black/40 motion-reduce:transition-none motion-reduce:hover:scale-100"
+          />
         </div>
+        <h1 className="text-[clamp(2.25rem,4vw,3rem)] font-bold leading-[1.1] tracking-tight text-bright">
+          Cyrus Manatad
+        </h1>
+        <h2 className="mt-5 text-lg font-medium text-heading">Full-Stack Web Developer</h2>
+        <p className="mt-4 max-w-[36ch] text-sm leading-relaxed text-slate lg:text-base">
+          Full-stack web developer with 8+ years of experience building scalable web applications, APIs, and business solutions using PHP, Node.js, React, and modern web technologies.
+        </p>
+        <nav className="mt-12" aria-label="Sections">
+          <ul>
+            {navLinks.map((link) => {
+              const id = link.href.slice(1);
+              const active = activeId === id;
+              return (
+                <li key={id}>
+                  <a
+                    href={link.href}
+                    onClick={() => setActiveId(id)}
+                    className="group flex items-center py-2"
+                    aria-current={active ? 'true' : undefined}
+                  >
+                    <span
+                      className={`mr-4 h-px transition-all duration-200 ${
+                        active ? 'w-16 bg-bright' : 'w-8 bg-slate group-hover:w-16 group-hover:bg-bright'
+                      }`}
+                    />
+                    <span
+                      className={`text-xs font-semibold uppercase tracking-[0.16em] transition-colors duration-200 ${
+                        active ? 'text-bright' : 'text-slate group-hover:text-bright'
+                      }`}
+                    >
+                      {link.name}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
-      {/* Mobile Menu */}
-      <div className={`md:hidden absolute top-0 left-0 w-full h-screen bg-navy-light transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
-          {navLinks.map((link) => (
-            <a key={link.name} href={link.href} onClick={() => setIsMenuOpen(false)} className="text-2xl text-gray-300 hover:text-accent transition-colors duration-300">{link.name}</a>
-          ))}
+      <div className="mt-12 flex flex-col items-start gap-6 lg:mt-8">
+        <a
+          href={Cv}
+          download="Cyrus-Manatad-CV.pdf"
+          className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-heading transition-colors duration-200 hover:border-bright hover:text-bright"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-3.5 w-3.5" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14" />
+          </svg>
+          Download CV
+        </a>
+        <div className="flex items-center gap-5">
+        <a
+          href="https://github.com/cyrusmanatad"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noreferrer"
+          className="text-slate transition-colors duration-200 hover:text-bright"
+        >
+          <GithubIcon className="h-5 w-5" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/camanatad/"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noreferrer"
+          className="text-slate transition-colors duration-200 hover:text-bright"
+        >
+          <LinkedinIcon className="h-5 w-5" />
+        </a>
         </div>
       </div>
     </header>

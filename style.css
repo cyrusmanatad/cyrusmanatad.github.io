@@ -2,52 +2,15 @@
 @custom-variant hover (&:hover);
 
 @theme {
-    --color-accent: #2D9CDB;
     --color-navy: #0a192f;
     --color-navy-light: #112240;
-    --color-navy-lighter: #1d2d50;
+    --color-slate: #8892b0;
+    --color-slate-light: #a8b2d1;
+    --color-heading: #ccd6f6;
+    --color-bright: #e6f1ff;
 }
 
-@utility tile {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    border: 1px solid color-mix(in srgb, var(--color-navy-lighter) 70%, transparent);
-    background-color: var(--color-navy-light);
-    padding: 1.25rem;
-    box-shadow: 0 4px 16px -8px rgb(0 0 0 / 0.6);
-    /* Clears the sticky header when a nav anchor scrolls a tile into view. */
-    scroll-margin-top: 4.5rem;
-}
-
-@utility tile-body {
-    flex: 1 1 auto;
-}
-
-.tile:target {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 1px var(--color-accent), 0 4px 16px -8px rgb(0 0 0 / 0.6);
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.5s ease-out both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .fade-in-up {
-        animation: none;
-    }
+::selection {
+    background-color: color-mix(in srgb, var(--color-slate-light) 35%, transparent);
+    color: var(--color-bright);
 }

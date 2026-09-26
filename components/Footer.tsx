@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-gray-800 py-5 text-center text-sm text-gray-500">
+    <footer className="py-8 text-center text-xs tracking-[0.02em] text-slate">
       <p>&copy; {new Date().getFullYear()} Cyrus Manatad. All Rights Reserved.</p>
     </footer>
   );
