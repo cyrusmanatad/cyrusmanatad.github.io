@@ -14,7 +14,6 @@ import React from "react";
  *  imagePosition  CSS object-position for the screenshot crop (default "top")
  *  fadeStart      (0-100) % of image height where the fade begins   (default 48)
  *  overlap        (px)    how far the text is pulled up into the fade (default 64)
- *  ctaLabel       button text (default "Visit site")
  */
 export function ProjectCardV2({
   title,
@@ -26,12 +25,13 @@ export function ProjectCardV2({
   imagePosition = "top",
   fadeStart = 48,
   overlap = 64,
-  ctaLabel = "Visit site",
-}: { title: string; description: string; tags?: string[]; href?: string; image?: string; imageAlt?: string; imagePosition?: string; fadeStart?: number; overlap?: number; ctaLabel?: string }) {
+}: { title: string; description: string; tags?: string[]; href?: string; image?: string; imageAlt?: string; imagePosition?: string; fadeStart?: number; overlap?: number }) {
   const mask = `linear-gradient(to bottom, #000 ${fadeStart}%, rgba(0,0,0,.55) 78%, transparent 100%)`;
 
+  const hasLink = href !== '#';
+
   return (
-    <article className="group flex flex-col overflow-hidden rounded-[14px] bg-white shadow-[0_1px_2px_rgba(15,28,58,.06),0_18px_40px_-24px_rgba(15,28,58,.35)] transition-colors duration-200 dark:bg-[#14264a] dark:shadow-[0_1px_0_rgba(255,255,255,.04)_inset,0_18px_40px_-22px_rgba(0,0,0,.7)] dark:hover:bg-[#172c55]">
+    <article className="group flex flex-col overflow-hidden rounded-[14px] bg-navy-light shadow-[0_1px_0_rgba(255,255,255,.04)_inset,0_18px_40px_-22px_rgba(0,0,0,.7)] transition-colors duration-200 hover:bg-[#172c55]">
       {/* Media – masked so it dissolves into the card colour */}
       <div
         className="relative aspect-video overflow-hidden"
@@ -58,35 +58,41 @@ export function ProjectCardV2({
         className="relative flex flex-1 flex-col gap-3 px-6 pb-6"
         style={{ marginTop: -overlap }}
       >
-        <h3 className="font-display text-[1.3rem] font-bold leading-tight tracking-tight text-[#0f1c3a] dark:text-[#f4f7ff]">
+        <h3 className="text-[1.3rem] font-bold leading-tight tracking-tight text-bright">
           {title}
         </h3>
 
-        <p className="max-w-[62ch] font-mono text-sm leading-[1.7] text-[#4b5a7a] dark:text-[#9fb0d0]">
+        <p className="max-w-[62ch] text-sm leading-[1.7] text-slate-light">
           {description}
         </p>
 
-        {tags.length > 0 && (
-          <ul className="mt-1.5 flex flex-wrap gap-2">
+        {(tags.length > 0 || hasLink) && (
+          <ul className="mt-1.5 flex flex-wrap items-center gap-2">
+            {hasLink && (
+              <li>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Visit ${title}`}
+                  className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/[.07] text-slate-light transition-colors duration-200 hover:bg-heading hover:text-navy focus-visible:bg-heading focus-visible:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-heading"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-3.5 w-3.5" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M9 7h8v8" />
+                  </svg>
+                </a>
+              </li>
+            )}
             {tags.map((tag) => (
               <li
                 key={tag}
-                className="rounded-full bg-[#eaf0fb] px-[11px] py-[5px] font-mono text-[0.72rem] text-[#2b3c62] dark:bg-white/[.07] dark:text-[#c3cfe8]"
+                className="rounded-full bg-white/[.07] px-[11px] py-[5px] text-[0.72rem] text-slate-light"
               >
                 {tag}
               </li>
             ))}
           </ul>
         )}
-
-        {/* mt-auto pins the CTA to the bottom so cards line up in a grid */}
-        <a
-          href={href}
-          className="mt-auto self-start rounded-lg bg-[#0a7fc2]/10 px-[18px] py-[9px] font-mono text-[0.8rem] font-medium tracking-wide text-[#0a7fc2] ring-1 ring-inset ring-[#0a7fc2]/45 transition-colors duration-200 hover:bg-[#0a7fc2] hover:text-white hover:ring-[#0a7fc2] focus-visible:bg-[#0a7fc2] focus-visible:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#0a7fc2] motion-reduce:transition-none dark:bg-[#3ec5ff]/10 dark:text-[#3ec5ff] dark:ring-[#3ec5ff]/45 dark:hover:bg-[#3ec5ff] dark:hover:text-[#06202e] dark:hover:ring-[#3ec5ff] dark:focus-visible:bg-[#3ec5ff] dark:focus-visible:text-[#06202e] dark:focus-visible:outline-[#3ec5ff]"
-        >
-          {ctaLabel}
-          <span className="sr-only"> – {title}</span>
-        </a>
       </div>
     </article>
   );
@@ -203,7 +209,7 @@ export const projects = [
 
 export default function ProjectCardGrid({ data } : { data: typeof projectsData}) {
   return (
-    <section className="min-h-screen bg-[#eef2fa] px-6 py-10 dark:bg-[#0c1730]">
+    <section className="bg-navy px-6 py-10">
       <div className="mx-auto grid max-w-[1240px] gap-6 [grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))]">
         {data.map((p) => (
           <ProjectCardV2 key={p.title} image={p.imageUrl} {...p} />

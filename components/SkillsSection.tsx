@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import { skillsData } from '../constants';
@@ -20,7 +19,7 @@ const SkillChip: React.FC<{ skill: Skill }> = ({ skill }) => {
   // Chip width fits the longest unbroken label so names never split mid-word.
   return (
     <div className="flex w-[5.5rem] flex-col items-center gap-1.5">
-      <div className="flex items-center justify-center rounded-[4px] border border-line-soft bg-paper p-2 transition-colors duration-200 hover:border-line hover:bg-paper-dim">
+      <div className="flex items-center justify-center rounded-[4px] border border-white/10 bg-navy-light p-2 transition-colors duration-200 hover:border-white/20 hover:bg-[#172a45]">
         <img
           src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skillSlug}/${skillSlug}-original.svg`}
           alt={skill.name}
@@ -34,7 +33,7 @@ const SkillChip: React.FC<{ skill: Skill }> = ({ skill }) => {
           title={skill.name}
         />
       </div>
-      <span className="w-full text-center text-xs leading-[1.2] break-words text-muted" title={skill.name}>
+      <span className="w-full text-center text-xs leading-[1.2] break-words text-slate" title={skill.name}>
         {skill.name}
       </span>
     </div>
@@ -43,7 +42,7 @@ const SkillChip: React.FC<{ skill: Skill }> = ({ skill }) => {
 
 const SkillBand: React.FC<{ category: SkillCategory }> = ({ category }) => (
   <div>
-    <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-accent-ink">{category.category}</h3>
+    <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-slate-light">{category.category}</h3>
     <div className="flex flex-wrap gap-x-3 gap-y-4">
       {category.skills.map((skill) => (
         <SkillChip key={skill.name} skill={skill} />
