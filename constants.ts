@@ -21,6 +21,7 @@ import NpmLogo from "./assets/logo-npm.png";
 import PHPLogo from "./assets/logo-php.png";
 import OvhLogo from "./assets/logo-ovh.svg";
 import TradingApp from "./assets/ui-trading-app.png";
+import VendorApp from "./assets/ui-vendor-app.png";
 
 export const skillsData: SkillCategory[] = [
   {
@@ -106,6 +107,41 @@ export const experienceData: Experience[] = [
 
 export const projectsData: Project[] = [
   {
+    title: 'pH Care',
+    description: 'Official website of pH Care, a leading feminine hygiene brand offering a range of products for women\'s health and wellness.',
+    imageUrl: PHCare,
+    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'Docker', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
+    url: 'https://phcare.com.ph/'
+  },
+  {
+    title: 'Lactezin',
+    description: 'Official website of Lactezin, It is the first over-the-counter drug registered anti-acne treatment in the Philippines.',
+    imageUrl: Lactezin,
+    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
+    url: 'https://lactezin.com/'
+  },
+  {
+    title: 'Fortima',
+    description: 'Official website of Fortima, a dietary supplement that helps boost skin health and immunity.',
+    imageUrl: Fortima,
+    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
+    url: 'https://fortima.com.ph/'
+  },
+  {
+    title: 'GynePro',
+    description: 'Official website of GynePro, a feminine wash brand that helps maintain intimate hygiene and freshness during red days.',
+    imageUrl: GynePro,
+    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
+    url: 'https://gynepro.com.ph/'
+  },
+  {
+    title: 'E-Commerce Operations Platform',
+    description: 'A web-base application that supports vendor management, product administration, order processing, and performance tracking metrics in one place for day-to-day operations.',
+    imageUrl: VendorApp,
+    technologies: ['Personal Project', 'VueJs', 'Vite', 'Tailwind CSS', 'Laravel', 'JWT', 'PostgreSQL', 'Docker', 'OVH Cloud', 'Cloudflare'],
+    url: 'https://bentador.cyrusmanatad.com/'
+  },
+  {
     title: 'Trading App',
     description: 'A real-time trade blotter that streams live order flow over WebSockets, with buy/sell volume and gross notional aggregates, side and status filters, symbol search, and amend or cancel actions on every trade.',
     imageUrl: TradingApp,
@@ -153,33 +189,5 @@ export const projectsData: Project[] = [
     imageUrl: CmsUi,
     technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'Admin LTE', 'Bootstrap 4'],
     url: '#'
-  },
-  {
-    title: 'pH Care',
-    description: 'Official website of pH Care, a leading feminine hygiene brand offering a range of products for women\'s health and wellness.',
-    imageUrl: PHCare,
-    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'Docker', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
-    url: 'https://phcare.com.ph/'
-  },
-  {
-    title: 'Lactezin',
-    description: 'Official website of Lactezin, It is the first over-the-counter drug registered anti-acne treatment in the Philippines.',
-    imageUrl: Lactezin,
-    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
-    url: 'https://lactezin.com/'
-  },
-  {
-    title: 'Fortima',
-    description: 'Official website of Fortima, a dietary supplement that helps boost skin health and immunity.',
-    imageUrl: Fortima,
-    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
-    url: 'https://fortima.com.ph/'
-  },
-  {
-    title: 'GynePro',
-    description: 'Official website of GynePro, a feminine wash brand that helps maintain intimate hygiene and freshness during red days.',
-    imageUrl: GynePro,
-    technologies: ['PHP', 'CodeIgniter 3', 'MySQL', 'jQuery', 'AJAX', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript'],
-    url: 'https://gynepro.com.ph/'
   }
 ];
